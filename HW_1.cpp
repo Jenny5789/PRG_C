@@ -38,7 +38,7 @@ int main()
     int cur;
     bool act;
     double rate;
-    string sta;
+   
 
     /*  입력받기*/
     cout << "이름을 입력하세요: ";
@@ -59,6 +59,14 @@ int main()
     rate = (double(cur)/goal)*100;
 
     
+  
+    /* 출력하기 */
+    cout << "\n---나의 성장 비전 리포트 ---" <<endl;
+    cout << "성함 : " << name << "(" << age << "세)" <<endl;
+    cout << "목표 비전 : " << goal << endl;
+    cout << "진행도 : " << cur << " / " << goal << endl;
+    cout << "현재 달성률 : " << rate << "%" << endl;
+    cout << "운영 상태 : " ;
     if(act == 1)
     {
         cout << "진행 중" << endl;
@@ -67,16 +75,7 @@ int main()
     {
         cout << "준비 중" << endl;
     }
-    cin >> act;
-
-
-    /* 출력하기 */
-    cout << "\n---나의 성장 비전 리포트 ---" <<endl;
-    cout << "성함 : " << name << "(" << age << "세)" <<endl;
-    cout << "목표 비전 : " << goal << endl;
-    cout << "진행도 : " << cur << " / " << goal << endl;
-    cout << "현재 달성률 : " << rate << "%" << endl;
-    cout << "운영 상태 : " << sta << endl;
+    
 
     return 0;
 
