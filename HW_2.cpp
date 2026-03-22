@@ -63,7 +63,7 @@ int main()
     /* 출력하기 */
     cout << "\n--- 나의 성장 비전 리포트 ---" <<endl;
     cout << "성함 : " << name << "(" << age << "세)" <<endl;
-    cout << "목표 비전 : " << goal << endl;
+    cout << "목표 비전 : " << my << endl;
     cout << "진행도 : " << cur << " / " << goal << endl;
     cout << "현재 달성률 : " << showpoint << rate << "%" << endl;
     cout << "운영 상태 : " ;
