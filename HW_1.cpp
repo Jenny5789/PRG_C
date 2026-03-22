@@ -28,39 +28,55 @@ using namespace std;
 
 int main()
 {
-    /* 변수 선언 이름:age, 나이:age, 
-    비전/목표: my, 목표 달성치:my, 현재달성치:cur
+    /* 변수 선언 이름:name, 나이:age, 
+    비전/목표: my, 목표 달성치:goal, 현재달성치:cur
     비전활성화여부: act, 현재 달성률: rate      */
     string name;
     int age;
-    char m;
+    string my;
     int goal;
     int cur;
     bool act;
     double rate;
+    string sta;
 
-
+    /*  입력받기*/
     cout << "이름을 입력하세요: ";
     cin >> name;
     cout << "나이를 입력하세요: ";
     cin >> age;
     cout << "나의 비전(한 단어)을 입력하세요: ";
-    cin >> m;
-    cout << "목표 수치를 입력하세요(0~100): ";
+    cin >> my;
+    cout << "목표 달성치를 입력하세요(정수, 100점 만점 기준): ";
     cin >> goal;
-    cout << "현재 진행 수치를 입력하세요(0~100): ";
+    cout << "현재 달성치를 입력하세요(정수, 0~100 사이 입력): ";
     cin >> cur;
     cout << "비전 활성화 여부(1:시작, 0:대기):";
     cin >> act;
 
 
+    /* 계산 */
+    rate = (double(cur)/goal)*100;
 
-    cout << "\n---나의 성장 비전 리포트 ---";
-    cout << "성함 : " << name << endl;
+    
+    if(act == 1)
+    {
+        cout << "진행 중" << endl;
+    }
+    else
+    {
+        cout << "준비 중" << endl;
+    }
+    cin >> act;
+
+
+    /* 출력하기 */
+    cout << "\n---나의 성장 비전 리포트 ---" <<endl;
+    cout << "성함 : " << name << "(" << age << "세)" <<endl;
     cout << "목표 비전 : " << goal << endl;
-    cout << "진행도 : " << cur / act * 100 << endl;
-    cout << "현재 달성도 : " << rate << endl;
-    cout << "운영 상태 : " << act << endl;
+    cout << "진행도 : " << cur << " / " << goal << endl;
+    cout << "현재 달성률 : " << rate << "%" << endl;
+    cout << "운영 상태 : " << sta << endl;
 
     return 0;
 
