@@ -65,7 +65,7 @@ int main()
     cout << "성함 : " << name << "(" << age << "세)" <<endl;
     cout << "목표 비전 : " << goal << endl;
     cout << "진행도 : " << cur << " / " << goal << endl;
-    cout << "현재 달성률 : " << rate << "%" << endl;
+    cout << "현재 달성률 : " << showpoint << rate << "%" << endl;
     cout << "운영 상태 : " ;
     if(act == 1)
     {
